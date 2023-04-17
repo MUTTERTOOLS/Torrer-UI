@@ -1,0 +1,5 @@
+./dist/*
+./play/*
+node_modules
+.**/*
+vite.config.js

@@ -1,0 +1,15 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "docs:build": "vitepress build src",
+    "docs:dev": "vitepress dev src",
+    "docs:preview": "vitepress preview src"
+  }
+}
