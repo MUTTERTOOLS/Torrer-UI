@@ -1,4 +1,4 @@
-export * from './src/index';
+// export * from './src/index';
 
 // import type { App, Plugin } from 'vue';
 // import * as components from './src/index';
@@ -12,3 +12,4 @@ export * from './src/index';
 // };
 
 // export { default as TrButton } from './src/button/button.vue';
+// export { default as TrIcon } from './src/icon/icon.vue';

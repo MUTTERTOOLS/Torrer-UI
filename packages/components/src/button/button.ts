@@ -3,19 +3,19 @@ import type { TrButtonType, TrButtonSize } from './interface';
 export const propsOption = {
   type: {
     type: String as PropType<TrButtonType>,
-    default: (): TrButtonType => 'default',
+    default: 'default' as TrButtonType,
   },
   size: {
     type: String as PropType<TrButtonSize>,
-    default: (): TrButtonSize => 'md',
+    default: 'md' as TrButtonSize,
   },
   loading: {
     type: Boolean,
-    default: () => false,
+    default: false,
   },
   disabled: {
     type: Boolean,
-    default: () => false,
+    default: false,
   },
 };
 

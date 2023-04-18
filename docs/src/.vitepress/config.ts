@@ -39,6 +39,7 @@ export default defineConfig({
           items: [
             { text: '按钮 Button', link: '/components/button/index' },
             { text: '图标 Icon', link: '/components/icon/index' },
+            { text: '布局 Layout', link: '/components/layout/index' },
           ],
         },
       ],
