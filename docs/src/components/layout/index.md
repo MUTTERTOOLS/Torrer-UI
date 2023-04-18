@@ -3,9 +3,6 @@
 ## tr-row
 
 <tr-row>
-  <tr-cow>123</tr-cow>
-  <tr-cow>123</tr-cow>
+  <tr-col span="6">666</tr-col>
+  <tr-col :span="6">126663</tr-col>
 </tr-row>
-<script setup>
-  import { TrCol, TrRow } from '@torrer-ui/components'
-</script>

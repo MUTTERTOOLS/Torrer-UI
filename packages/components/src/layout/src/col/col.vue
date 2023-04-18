@@ -4,14 +4,9 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'TrCol',
-};
-</script>
 <script setup lang="ts">
 import { defineProps, computed, toRefs } from 'vue';
-import { rowOption } from './col';
+import { rowOption } from './props';
 const props = defineProps(rowOption);
 const { justify, align, gutter, span } = toRefs(props);
 

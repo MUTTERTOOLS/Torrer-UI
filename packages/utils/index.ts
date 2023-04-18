@@ -1,2 +1,1 @@
-console.log(111);
-export default {};
+export * from './src/install';

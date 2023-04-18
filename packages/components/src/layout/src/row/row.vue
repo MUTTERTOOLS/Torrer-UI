@@ -4,14 +4,9 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'TrRol',
-};
-</script>
 <script setup lang="ts">
-import { defineProps, computed, toRefs } from 'vue';
-import { rowOption } from './row';
+import { computed, toRefs } from 'vue';
+import { rowOption } from './props';
 const props = defineProps(rowOption);
 const { justify, align, gutter } = toRefs(props);
 

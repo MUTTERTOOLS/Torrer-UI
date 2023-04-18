@@ -1,5 +1,5 @@
 import { PropType } from 'vue';
-import { Justify, Align } from './interface';
+import { Justify, Align } from '../interface';
 export const rowOption = {
   justify: {
     type: String as PropType<Justify>,
@@ -12,9 +12,5 @@ export const rowOption = {
   gutter: {
     type: [String, Number] as PropType<string | number>,
     default: 0,
-  },
-  span: {
-    type: [String, Number] as PropType<string | number>,
-    default: 1,
   },
 };

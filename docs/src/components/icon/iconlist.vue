@@ -9,10 +9,10 @@
 </template>
 
 <script setup lang="ts">
-import { TrIcon } from '@torrer-ui/components';
-import JsonOfIcon from '@torrer-ui/components/src/icon/font/iconfont.json';
+// import { TrIcon } from '@torrer-ui/components';
+import JsonOfIcon from '@torrer-ui/components/src/icon/src/font/iconfont.json';
 const { glyphs } = JsonOfIcon;
-console.log(TrIcon, glyphs);
+// console.log(TrIcon, glyphs);
 </script>
 
 <style scoped>

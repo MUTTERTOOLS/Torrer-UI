@@ -1,15 +1,13 @@
-// export * from './src/index';
+import type { Plugin } from 'vue';
+import * as Comps from './src';
+const TorrerUI: Plugin = {
+  install(vm) {
+    console.log(Comps);
+    for (const key in Comps) {
+      vm.use(Comps[key]);
+    }
+  },
+};
 
-// import type { App, Plugin } from 'vue';
-// import * as components from './src/index';
-
-// export default {
-//   install: (app: App) => {
-//     for (const name in components) {
-//       app.use(components[name] as Plugin);
-//     }
-//   },
-// };
-
-// export { default as TrButton } from './src/button/button.vue';
-// export { default as TrIcon } from './src/icon/icon.vue';
+export default TorrerUI;
+export * from './src';

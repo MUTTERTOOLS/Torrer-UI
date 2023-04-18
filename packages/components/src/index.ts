@@ -19,7 +19,11 @@
 
 // export default exportTarget;
 
-export { default as TrButton } from './button/button.vue';
-export { default as TrIcon } from './icon/icon.vue';
+// export { default as TrButton } from './button/src/button.vue';
+// export { default as TrIcon } from './icon/icon.vue';
 
 // export default { TrButton, TrIcon };
+
+export * from './button';
+export * from './icon';
+export * from './layout';

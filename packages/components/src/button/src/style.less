@@ -1,0 +1,42 @@
+@color-primary: #1890ff;
+@color-warn: #faad14;
+@color-success: #52c41a;
+@color-error: #ff4d4f;
+
+.tr-button {
+  border: 0;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px #0000000b;
+
+  // type
+  &-default {
+    background-color: @color-primary;
+  }
+  &-warn {
+    background-color: @color-warn;
+  }
+  &-success {
+    background-color: @color-success;
+  }
+  &-error {
+    background-color: @color-error;
+  }
+
+  // size
+  &-lg {
+    width: 86px;
+    height: 35px;
+    padding: 6px 18px;
+  }
+  &-md {
+    width: 70px;
+    height: 30px;
+    padding: 2px 15px;
+  }
+  &-sm {
+    width: 50px;
+    height: 21px;
+    padding: 1px 7px;
+  }
+}

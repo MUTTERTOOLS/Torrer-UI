@@ -11,7 +11,7 @@ export default {
 </script>
 <script lang="ts" setup>
 import { toRefs, computed } from 'vue';
-import { propsOption, EmitsOption } from './button';
+import { propsOption, EmitsOption } from './props';
 
 const props = defineProps(propsOption);
 const emits = defineEmits(EmitsOption);
