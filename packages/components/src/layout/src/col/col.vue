@@ -1,24 +1,38 @@
 <template>
-  <div :class="classList">
+  <div class="tr-col" :style="style">
     <slot></slot>
   </div>
 </template>
 
+<script lang="ts">
+export default {
+  name: 'TrCol',
+};
+</script>
+
 <script setup lang="ts">
-import { defineProps, computed, toRefs } from 'vue';
+import { computed, toRefs, inject } from 'vue';
+import type { ComputedRef } from 'vue';
 import { rowOption } from './props';
 const props = defineProps(rowOption);
-const { justify, align, gutter, span } = toRefs(props);
+const { span } = toRefs(props);
 
-justify.value =
-  justify.value == 'start' || justify.value == 'end' ? `flex-${justify.value}` : justify.value;
+const gutter = inject<ComputedRef<number>>('gutter');
+// const grid = inject<Ref<number>>('grid');
+// grid.value = grid.value - flex;
 
-const classList = computed(() => {
+const style = computed(() => {
+  const perc: string = (Number(span.value) / 24) * 100 + '%';
   return {
-    justifyContent: justify.value + 'px',
-    alignItem: align.value + 'px',
-    margin: gutter.value + 'px',
-    flex: span,
+    padding: `0 ${gutter.value / 2}px`,
+    width: perc,
+    flex: `0 0 ${perc}`, // flex比width优先级高
   };
 });
 </script>
+
+<style>
+.tr-col {
+  display: block;
+}
+</style>

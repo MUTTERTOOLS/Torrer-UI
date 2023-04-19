@@ -1,4 +1,5 @@
 // .vitepress/theme/index.js
+// eslint-disable-next-line import/no-unresolved
 import DefaultTheme from 'vitepress/theme';
 import TorrerUI from '@torrer-ui/components';
 export default {
@@ -6,7 +7,7 @@ export default {
   enhanceApp(ctx) {
     // register your custom global components
     // ctx.app.component(TrButton /* ... */);
-    // console.log(TorrerUI);
+    console.log(TorrerUI);
     ctx.app.use(TorrerUI);
   },
 };
