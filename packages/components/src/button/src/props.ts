@@ -1,5 +1,5 @@
 import type { PropType } from 'vue';
-import type { TrButtonType, TrButtonSize } from './interface';
+import type { TrButtonType, TrButtonSize, Radius } from './interface';
 export const propsOption = {
   type: {
     type: String as PropType<TrButtonType>,
@@ -14,6 +14,14 @@ export const propsOption = {
     default: false,
   },
   disabled: {
+    type: Boolean,
+    default: false,
+  },
+  radius: {
+    type: String as PropType<Radius>,
+    default: '',
+  },
+  hover: {
     type: Boolean,
     default: false,
   },

@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress';
-// import MarkdownPreview from 'vite-plugin-markdown-preview';
+import MarkdownPreview from 'vite-plugin-markdown-preview';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -37,9 +37,11 @@ export default defineConfig({
         {
           text: '表单组件',
           items: [
+            { text: '内置样式 Themes', link: '/components/themes/index' },
             { text: '按钮 Button', link: '/components/button/index' },
             { text: '图标 Icon', link: '/components/icon/index' },
             { text: '布局 Layout', link: '/components/layout/index' },
+            { text: '面包屑 Breadcrumb', link: '/components/breadcrumb/index' },
           ],
         },
       ],
@@ -47,8 +49,9 @@ export default defineConfig({
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
   },
+
   vite: {
-    // plugins: [MarkdownPreview()],
+    plugins: [MarkdownPreview()],
   },
   markdown: {
     toc: {},

@@ -1,5 +1,5 @@
 <template>
-  <span :class="`iconfont icon-${name}`"></span>
+  <span :class="`tr-icon iconfont icon-${name}`"></span>
 </template>
 
 <script lang="ts">
@@ -20,3 +20,9 @@ const props = defineProps({
 });
 const { name } = toRefs(props);
 </script>
+
+<style>
+.tr-icon {
+  font-size: 16px;
+}
+</style>

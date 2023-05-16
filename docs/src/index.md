@@ -32,6 +32,10 @@ features:
 
 [[toc]] -->
 
-<style module>
+<!-- <style module>
   @import url('./index.css')
-</style>
+</style> -->
+
+<!-- ```vue preview
+<template>123</template>
+``` -->

@@ -1,42 +1,115 @@
-@color-primary: #1890ff;
-@color-warn: #faad14;
-@color-success: #52c41a;
-@color-error: #ff4d4f;
+@import url('@torrer-ui/components/themes/index.less');
 
 .tr-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 0;
   color: #fff;
+  text-align: center;
   text-shadow: 0 -1px 0 rgba(0,0,0,.12);
-  box-shadow: 0 2px #0000000b;
-
+  border: 1px solid @color-border-light;
+  cursor: pointer;
+  &:extend(.shadow-regular);
+  
   // type
   &-default {
-    background-color: @color-primary;
+    // background-color: @color-primary-default;
+    color: @color-text-main;
+  }
+  &-primary {
+    background-color: @color-primary-default;
   }
   &-warn {
-    background-color: @color-warn;
+    background-color: @color-warn-default;
   }
   &-success {
-    background-color: @color-success;
+    background-color: @color-success-default;
   }
   &-error {
-    background-color: @color-error;
+    background-color: @color-error-default;
   }
 
   // size
   &-lg {
-    width: 86px;
-    height: 35px;
-    padding: 6px 18px;
+    min-width: 90px;
+    height: 40px;
+    line-height: 34px;
+    font-size: 16px;
+    padding: 0px 8px;
   }
   &-md {
-    width: 70px;
-    height: 30px;
-    padding: 2px 15px;
+    min-width: 70px;
+    height: 37px;
+    line-height: 32px;
+    font-size: 14px;
+    padding: 0px 8px;
   }
   &-sm {
-    width: 50px;
-    height: 21px;
-    padding: 1px 7px;
+    min-width: 55px;
+    height: 30px;
+    line-height: 26px;
+    font-size: 12px;
+    padding: 0 8px;
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+    &[class~="tr-button-default"] {
+      color: white;
+      background-color: @color-text-light;
+    }
+    &[class~="tr-button-primary"] {
+      background-color: @color-primary-disabled;
+    }
+    &[class~="tr-button-success"] {
+      background-color: @color-success-disabled;
+    }
+    &[class~="tr-button-error"] {
+      background-color: @color-error-disabled;
+    }
+    &[class~="tr-button-warn"] {
+      background-color: @color-warn-disabled;
+    }
+  }
+
+  &-loading-icon {
+    color: rgb(200, 200, 200);
+    width: 18px;
+    height: 18px;
+    margin: 0 4px 0 0;
+    border: 1px solid;
+    border-color: rgb(200, 200, 200) rgb(244, 244, 244) rgb(244, 244, 244);
+    border-radius: 50%;
+    animation: loading 1s linear infinite;
+  }
+
+  &-hover:hover {
+    & {
+      .shadow-hover()
+    }
+    &[class~="tr-button-primary"] {
+      .shadow-hover(@color-primary-default)
+    }
+    &[class~="tr-button-success"] {
+      .shadow-hover(@color-success-default)
+    }
+    &[class~="tr-button-error"] {
+      .shadow-hover(@color-error-default)
+    }
+    &[class~="tr-button-warn"] {
+      .shadow-hover(@color-warn-default)
+    }
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
   }
 }

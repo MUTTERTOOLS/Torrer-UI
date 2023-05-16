@@ -2,6 +2,7 @@
 // eslint-disable-next-line import/no-unresolved
 import DefaultTheme from 'vitepress/theme';
 import TorrerUI from '@torrer-ui/components';
+import '@torrer-ui/components/themes/index.less';
 export default {
   extends: DefaultTheme,
   enhanceApp(ctx) {

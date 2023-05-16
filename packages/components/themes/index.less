@@ -1,0 +1,88 @@
+@color-primary-default: #3c9cff;
+@color-primary-dark: #398ade;
+@color-primary-disabled: #9acafc;
+@color-primary-light: #ecf6ff;
+
+@color-error-default: #f56c6c;
+@color-error-dark: #e45656;
+@color-error-disabled: #f7b2b2;
+@color-error-light: #fef0f0;
+
+@color-warn-default: #f9ae3d;
+@color-warn-dark: #f1a532;
+@color-warn-disabled: #f9d39b;
+@color-warn-light: #fdf6ec;
+
+@color-success-default: #5ac725;
+@color-success-dark: #53c21d;
+@color-success-disabled: #a9e08f;
+@color-success-light: #f5fff0;
+
+@color-text-main: #303133;
+@color-text-content: #606266;
+@color-text-tips: #909193;
+@color-text-light: #c0c4cc;
+
+@color-border-regular: #9a9998;
+@color-border-normal: #b4b3b1;
+@color-border-medium: #ceccca;
+@color-border-light: #e7e6e4;
+
+@color-bg: #f3f4f6;
+@color-shadow: rgba(0, 0, 0, 0.15);
+
+// 标题文本
+.t-title-heavy {
+    color: @color-text-main;
+    font-size: 24px;
+    font-weight: 900px;
+    line-height: 46px;
+    // opacity: 0.88;
+}
+.t-title-normal {
+    color: @color-text-main;
+    font-size: 20px;
+    font-weight: 800px;
+    line-height: 30px;
+    // opacity: 0.65;
+}
+.t-title-medium {
+    color: @color-text-main;
+    font-size: 16px;
+    font-weight: 800px;
+    line-height: 24px;
+    // opacity: 0.45;
+}
+.t-title-light {
+    color: @color-text-main;
+    font-size: 12px;
+    font-weight: 800px;
+    line-height: 18px;
+    // opacity: 0.25;
+}
+
+
+// 阴影
+.shadow-regular {
+    box-shadow: 0 0px 100px 1px @color-shadow;
+}
+.shadow-normal {
+    box-shadow: 0 6px 6px -2px @color-shadow;
+}
+.shadow-hover(@color: @color-shadow) {
+    box-shadow: 0 8px 24px -4px @color;
+}
+.shadow-popup {
+    box-shadow: 0 4px 48px 0px @color-shadow;
+}
+
+// 圆角
+.radius-circle {
+    border-radius: 50%;
+}
+.radius-regular {
+    border-radius: 20px;
+}
+.radius-light {
+    border-radius: 8px;
+}
