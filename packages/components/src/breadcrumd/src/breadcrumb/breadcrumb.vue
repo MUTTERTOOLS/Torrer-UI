@@ -11,7 +11,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { defineProps, toRefs, provide } from 'vue';
+import { toRefs, provide } from 'vue';
 import { breadcrumbPropsOption } from './porps';
 const props = defineProps(breadcrumbPropsOption);
 const { icon } = toRefs(props);

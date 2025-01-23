@@ -1,30 +1,29 @@
-// import type { Component } from 'vue';
+import type { Plugin } from 'vue';
+import { TrButton } from './button';
+import { TrIcon } from './icon';
+import { TrRow, TrCol } from './layout';
+import { TrBreadcrumb, TrBreadcrumbItem } from './breadcrumd';
 
-// interface Module {
-//   default: Component;
-// }
-// interface ModulesObject {
-//   [key: string]: Module;
-// }
-// type Components = {
-//   TrButton?: Component;
-//   TrIcon?: Component;
-// };
-// const exportTarget: Components = {};
-// const modules: ModulesObject = import.meta.globEager('./**/*.vue');
-// for (const path in modules) {
-//   const { default: Comp } = modules[path];
-//   exportTarget[Comp.name] = Comp;
-// }
+export { TrButton } from './button';
+export { TrIcon } from './icon';
+export { TrRow, TrCol } from './layout';
+export { TrBreadcrumb, TrBreadcrumbItem } from './breadcrumd';
 
-// export default exportTarget;
+const Comps = [
+  TrButton,
+  TrRow,
+  TrCol,
+  TrIcon,
+  TrBreadcrumb,
+  TrBreadcrumbItem
+]
+const TorrerUI: Plugin = {
+  install(vm) {
+    console.log(Comps);
+    for (const comp of Comps) {
+      vm.component(comp.name, comp);
+    }
+  },
+};
 
-// export { default as TrButton } from './button/src/button.vue';
-// export { default as TrIcon } from './icon/icon.vue';
-
-// export default { TrButton, TrIcon };
-
-export * from './button';
-export * from './icon';
-export * from './layout';
-export * from './breadcrumd';
+export default TorrerUI;

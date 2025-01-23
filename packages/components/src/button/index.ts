@@ -1,4 +1,1 @@
-import { withInstall } from '@torrer-ui/utils';
-import button from './src/button.vue';
-
-export const TrButton = withInstall(button);
+export { default as TrButton } from './src/button.vue';
